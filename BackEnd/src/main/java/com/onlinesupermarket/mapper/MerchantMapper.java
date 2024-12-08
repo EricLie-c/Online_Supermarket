@@ -50,7 +50,7 @@ public interface MerchantMapper {
     @Insert("insert into product values (#{name}, #{price}, #{filePath}, #{time}, #{addr})")
     void addCommodity(String name, String price, String filePath, String time, String addr);
 
-    @Delete("delete from product where 商品名=#{name}")
+    @Delete("delete from product where name=#{name}")
     void deleteCommodity(String name);
 
     @Update("update product set name=#{name}, price=#{price}, picture=#{filePath}, deliv_time=#{time}, deliv_addr=#{addr} where name=#{pastname}")

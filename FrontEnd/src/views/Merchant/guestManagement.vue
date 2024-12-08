@@ -287,6 +287,7 @@ export default {
             Object.keys(this.itemInfo).forEach((ele) => {
                 formData.append(ele, this.itemInfo[ele]);
             });
+            if (this.itemInfo.status != 'delete')
             formData.append('file', this.pictureFile);
             axios.post("http://113.44.84.103:8080/changeCommodity", formData).then(() => { alert("操作成功！") })
             this.pictureFile = {};

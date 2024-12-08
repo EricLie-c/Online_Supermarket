@@ -132,7 +132,7 @@ public class MerchantServiceImpl implements MerchantService {
             date =  orderManagementRequest.getYear() + "-0" + orderManagementRequest.getMonth();
         }
         else{
-            date = orderManagementRequest.getYear() + "0" +orderManagementRequest.getMonth();
+            date = orderManagementRequest.getYear() + "-" +orderManagementRequest.getMonth();
         }
 
         log.info(date);

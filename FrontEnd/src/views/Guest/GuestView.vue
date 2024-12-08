@@ -156,7 +156,7 @@
                             style="height: 300px; list-style-type:none"> -->
                     <div v-infinite-scroll="load"
                         style="overflow: auto; display: flex; flex-wrap: wrap; height:calc(100vh - 190px); text-align: center;margin-top: 30px;"
-                        infinite-scroll-distance="20px">
+                        infinite-scroll-distance="1">
                         <div v-for="(i, index) in commodityList" :key="index" style="height: 300px; flex: 0 0 48%;">
                             <img :src="i.picture" style="height: 200px; width:200px"> <br>
                             <span>{{ i.name }}</span><br>

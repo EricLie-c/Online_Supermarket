@@ -46,8 +46,8 @@ public class MerchantController {
 
     @Data
     public static class changeCommodityRequest{
-        private MultipartFile file;
         private String name;
+        private MultipartFile file;
         private String price;
         private String addr;
         private String status;
@@ -81,6 +81,7 @@ public class MerchantController {
 
     @PostMapping("/changeCommodity")
     public void changeCommodity(changeCommodityRequest changeCommodityRequest){
+//        changeCommodityRequest.setFile(file);
         if(Objects.equals(changeCommodityRequest.status, "add")){
             merchantService.addCommodity(changeCommodityRequest);
         }
